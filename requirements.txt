@@ -3,3 +3,5 @@ openai
 google-generativeai
 pandas
 openpyxl
+matplotlib
+seaborn
