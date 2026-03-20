@@ -1,12 +1,16 @@
-import json
+import pandas as pd
 
-def ler_arquivo_json(nome_arquivo):
+def ler_arquivo_xlsx(nome_arquivo):
     try:
-        with open(nome_arquivo, 'r', encoding='utf-8') as arquivo:
-            return json.load(arquivo)
+        # Lê o arquivo Excel e transforma em DataFrame
+        df = pd.read_excel(nome_arquivo, engine = 'openpyxl')
+        
+        # Se você quiser que ele retorne uma lista de dicionários (igual ao JSON)
+        return df.to_dict(orient = 'records')
+    
     except FileNotFoundError:
         print(f"Erro: O arquivo {nome_arquivo} não foi encontrado.")
         return []
-    except json.JSONDecodeError:
-        print(f"Erro: Falha na sintaxe JSON do arquivo {nome_arquivo}.")
+    except Exception as e:
+        print(f"Erro ao ler o Excel: {e}")
         return []
