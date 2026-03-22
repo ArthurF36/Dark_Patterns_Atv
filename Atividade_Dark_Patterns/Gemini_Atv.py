@@ -91,12 +91,11 @@ if __name__ == "__main__":
             print("Insira uma URL válida (ex: https://google.com)")
             continue
 
-        print(f"🔍 Analisando: {url_input}...")
+        print(f"Analisando: {url_input}...")
         dados_analise = analisar_site(url_input)
         
-        # Adiciona o resultado à nossa lista
         lista_resultados.append(dados_analise)
-        print("✅ Dados processados com sucesso!")
+        print("Dados processados com sucesso! \n")
 
     # Fora do loop, consolidamos tudo em um DataFrame
     if lista_resultados:

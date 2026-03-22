@@ -57,7 +57,7 @@ Analise o HTML e responda APENAS com um JSON válido seguindo este padrão estri
 HTML: {html[:15000]} 
 """
 
-    # ESTRUTURA OPENAI (Diferente do Gemini)
+    # ESTRUTURA OPENAI
     payload = {
         "model": modelo,
         "messages": [
@@ -99,11 +99,11 @@ if __name__ == "__main__":
             print("Insira uma URL válida (ex: https://google.com)")
             continue
 
-        print(f"🔍 Analisando com {modelo}: {url_input}...")
+        print(f"Analisando com {modelo}: {url_input}...")
         dados_analise = analisar_site(url_input)
         
         lista_resultados.append(dados_analise)
-        print("✅ Dados processados!")
+        print("Dados processados!")
 
     if lista_resultados:
         df_final = pd.DataFrame(lista_resultados)
