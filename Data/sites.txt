@@ -29,7 +29,6 @@ https://wordpress.org/
 https://www.adobe.com/
 https://www.youtube.com/
 https://www.evernote.com/
-https://www.evernote.com/
 https://www.github.com/
 https://medium.com/
 https://mail.google.com/
